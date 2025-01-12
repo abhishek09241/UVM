@@ -1,0 +1,87 @@
+Start time: 08:21:36 on Jan 12,2025
+qverilog .\adder_top.sv 
+** Note: (qverilog-2286) .\adder_top.sv(2): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package adder_top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling module adder_sub
+-- Compiling interface adder_sub_interface
+-- Compiling module adder_top
+
+Top level modules:
+	adder_top
+# vsim -lib work work.adder_top_sv_unit work.adder_top -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.adder_top_sv_unit(fast)
+# Loading work.adder_top(fast)
+# Loading work.adder_sub_interface(fast)
+# Loading C:/questasim64_2021.1/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO .\adder_top.sv(66) @ 0: reporter [Smile Please From RUN TEST your UVM STARTS] This is Top Module
+# UVM_INFO @ 0: reporter [RNTST] Running test parent_test...
+# UVM_INFO adder_sub_agent.sv(28) @ 0: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle [uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle] I'm the connect phase of adder_sub_agent class ..
+# -----------------------------------------------------------------------
+# Name                            Type                     Size  Value   
+# -----------------------------------------------------------------------
+# adder_sub_sequence_item_handle  adder_sub_sequence_item  -     @679    
+#   data_in_1                     integral                 4     'b0xxxx 
+#   data_in_2                     integral                 4     'b0xxxx 
+#   enable                        integral                 1     'b0x    
+#   ctrl                          integral                 1     'b0x    
+#   data_out                      integral                 5     'b0xxxxx
+# -----------------------------------------------------------------------
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    5
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [Smile Please From RUN TEST your UVM STARTS]     1
+# [uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle]     1
+# ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 0 ps  Iteration: 215  Instance: /adder_top
+# End time: 08:21:51 on Jan 12,2025, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 0
