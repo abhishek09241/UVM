@@ -6,6 +6,7 @@ import uvm_pkg::*;
 `include "adder_sub_interface.sv"
 
 
+typedef adder_sub_sequence;
 typedef adder_sub_driver;
 typedef adder_sub_monitor;
 typedef adder_sub_sequencer;
@@ -17,6 +18,7 @@ typedef adder_sub_env;
 typedef parent_test;
 
 
+`include "adder_sub_sequence.sv"
 `include "adder_sub_driver.sv"
 `include "adder_sub_monitor.sv"
 `include "adder_sub_sequencer.sv"

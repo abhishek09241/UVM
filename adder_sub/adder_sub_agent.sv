@@ -25,7 +25,7 @@ class adder_sub_agent extends uvm_agent;
 
     function void connect_phase(uvm_phase phase);
       super.connect_phase(phase);
-      `uvm_info(get_full_name(),"I'm the connect phase of adder_sub_agent class ..",UVM_NONE)
+      //`uvm_info(get_full_name(),"I'm the connect phase of adder_sub_agent class ..",UVM_NONE)
        adder_sub_driver_handle.seq_item_port.connect(adder_sub_sequencer_handle.seq_item_export);
        //adder_sub_sequence_item_handle.print();
       
