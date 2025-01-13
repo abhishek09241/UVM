@@ -1,4 +1,4 @@
-Start time: 18:49:14 on Jan 12,2025
+Start time: 05:26:44 on Jan 13,2025
 qverilog .\adder_top.sv 
 ** Note: (qverilog-2286) .\adder_top.sv(2): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Compiling package adder_top_sv_unit
@@ -25,3 +25,137 @@ Top level modules:
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.adder_top_sv_unit(fast)
+# Loading work.adder_top(fast)
+# Loading work.adder_sub_interface(fast)
+# Loading C:/questasim64_2021.1/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO .\adder_top.sv(68) @ 0: reporter [Smile Please From RUN TEST your UVM STARTS] This is Top Module
+# UVM_INFO @ 0: reporter [RNTST] Running test parent_test...
+# UVM_INFO adder_sub_sequence.sv(12) @ 0: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle@@adder_sub_sequence_handle [ ] Hi I'm the body task of adder_sub_sequence..
+# UVM_INFO adder_sub_monitor.sv(41) @ 10000: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_monitor_handle [ ] Reset is driving zero!
+# UVM_INFO adder_sub_driver.sv(54) @ 30000: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_driver_handle [] Data in driver displaying
+# ---------------------------------------------------------------
+# Name                            Type                     Size  Value                                                                                                        
+# ---------------------------------------------------------------
+# adder_sub_sequence_item_handle  adder_sub_sequence_item  -     @705                                                                                                         
+#   data_in_1                     integral                 4     'b111                                                                                                        
+#   data_in_2                     integral                 4     'b1001                                                                                                       
+#   enable                        integral                 1     'b0                                                                                                          
+#   ctrl                          integral                 1     'b1                                                                                                          
+#   data_out                      integral                 5     'b0xxxxx                                                                                                     
+#   begin_time                    time                     64    0                                                                                                            
+#   depth                         int                      32    'd2                                                                                                          
+#   parent sequence (name)        string                   25    adder_sub_sequence_handle                                                                                    
+#   parent sequence (full name)   string                   109   uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle.adder_sub_sequence_handle
+#   sequencer                     string                   83    uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle                          
+# ---------------------------------------------------------------
+# UVM_INFO adder_sub_driver.sv(54) @ 70000: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_driver_handle [] Data in driver displaying
+# ---------------------------------------------------------------
+# Name                            Type                     Size  Value                                                                                                        
+# ---------------------------------------------------------------
+# adder_sub_sequence_item_handle  adder_sub_sequence_item  -     @738                                                                                                         
+#   data_in_1                     integral                 4     'b1110                                                                                                       
+#   data_in_2                     integral                 4     'b1001                                                                                                       
+#   enable                        integral                 1     'b1                                                                                                          
+#   ctrl                          integral                 1     'b0                                                                                                          
+#   data_out                      integral                 5     'b0xxxxx                                                                                                     
+#   begin_time                    time                     64    30000                                                                                                        
+#   depth                         int                      32    'd2                                                                                                          
+#   parent sequence (name)        string                   25    adder_sub_sequence_handle                                                                                    
+#   parent sequence (full name)   string                   109   uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle.adder_sub_sequence_handle
+#   sequencer                     string                   83    uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle                          
+# ---------------------------------------------------------------
+# UVM_INFO adder_sub_driver.sv(54) @ 110000: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_driver_handle [] Data in driver displaying
+# ---------------------------------------------------------------
+# Name                            Type                     Size  Value                                                                                                        
+# ---------------------------------------------------------------
+# adder_sub_sequence_item_handle  adder_sub_sequence_item  -     @750                                                                                                         
+#   data_in_1                     integral                 4     'b101                                                                                                        
+#   data_in_2                     integral                 4     'b1001                                                                                                       
+#   enable                        integral                 1     'b0                                                                                                          
+#   ctrl                          integral                 1     'b0                                                                                                          
+#   data_out                      integral                 5     'b0xxxxx                                                                                                     
+#   begin_time                    time                     64    70000                                                                                                        
+#   depth                         int                      32    'd2                                                                                                          
+#   parent sequence (name)        string                   25    adder_sub_sequence_handle                                                                                    
+#   parent sequence (full name)   string                   109   uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle.adder_sub_sequence_handle
+#   sequencer                     string                   83    uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle                          
+# ---------------------------------------------------------------
+# UVM_INFO adder_sub_driver.sv(54) @ 150000: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_driver_handle [] Data in driver displaying
+# ---------------------------------------------------------------
+# Name                            Type                     Size  Value                                                                                                        
+# ---------------------------------------------------------------
+# adder_sub_sequence_item_handle  adder_sub_sequence_item  -     @762                                                                                                         
+#   data_in_1                     integral                 4     'b1110                                                                                                       
+#   data_in_2                     integral                 4     'b10                                                                                                         
+#   enable                        integral                 1     'b0                                                                                                          
+#   ctrl                          integral                 1     'b1                                                                                                          
+#   data_out                      integral                 5     'b0xxxxx                                                                                                     
+#   begin_time                    time                     64    110000                                                                                                       
+#   depth                         int                      32    'd2                                                                                                          
+#   parent sequence (name)        string                   25    adder_sub_sequence_handle                                                                                    
+#   parent sequence (full name)   string                   109   uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle.adder_sub_sequence_handle
+#   sequencer                     string                   83    uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle                          
+# ---------------------------------------------------------------
+# UVM_INFO adder_sub_driver.sv(54) @ 190000: uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_driver_handle [] Data in driver displaying
+# ---------------------------------------------------------------
+# Name                            Type                     Size  Value                                                                                                        
+# ---------------------------------------------------------------
+# adder_sub_sequence_item_handle  adder_sub_sequence_item  -     @774                                                                                                         
+#   data_in_1                     integral                 4     'b111                                                                                                        
+#   data_in_2                     integral                 4     'b100                                                                                                        
+#   enable                        integral                 1     'b1                                                                                                          
+#   ctrl                          integral                 1     'b0                                                                                                          
+#   data_out                      integral                 5     'b0xxxxx                                                                                                     
+#   begin_time                    time                     64    150000                                                                                                       
+#   depth                         int                      32    'd2                                                                                                          
+#   parent sequence (name)        string                   25    adder_sub_sequence_handle                                                                                    
+#   parent sequence (full name)   string                   109   uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle.adder_sub_sequence_handle
+#   sequencer                     string                   83    uvm_test_top.adder_sub_env_handle.adder_sub_agent_handle.adder_sub_sequencer_handle                          
+# ---------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 190000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   12
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# []     5
+# [ ]     2
+# [Questa UVM]     2
+# [RNTST]     1
+# [Smile Please From RUN TEST your UVM STARTS]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : C:/questasim64_2021.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 190 ns  Iteration: 61  Instance: /adder_top
+# End time: 05:27:07 on Jan 13,2025, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 0

@@ -5,17 +5,20 @@ adder_sub_sequence_item         adder_sub_sequence_item_handle;
 
     function new(string name = "adder_sub_sequence");
     super.new(name);
-    `uvm_info(get_full_name(),"Hi, I'm the new function of adder_sub_sequence",UVM_NONE)
+    //`uvm_info(get_full_name(),"Hi, I'm the new function of adder_sub_sequence",UVM_NONE)
     endfunction //new()
 
     task body();
-        `uvm_info(get_full_name(),"Hi I'm the body task of adder_sub_sequence..",UVM_NONE)
-        repeat(1) begin
+        `uvm_info(" ","Hi I'm the body task of adder_sub_sequence..",UVM_NONE)
+        repeat(5) begin
             adder_sub_sequence_item_handle  = adder_sub_sequence_item::type_id::create("adder_sub_sequence_item_handle");
             start_item(adder_sub_sequence_item_handle);
             assert(adder_sub_sequence_item_handle.randomize());
-            adder_sub_sequence_item_handle.print();
+           // adder_sub_sequence_item_handle.print();
             finish_item(adder_sub_sequence_item_handle);
+            get_response(adder_sub_sequence_item_handle);
+           // `uvm_info(" ","Response Printing",UVM_NONE)
+           // adder_sub_sequence_item_handle.print();
         end
     endtask //
 endclass //adder_sub_sequence extends uvm_sequence

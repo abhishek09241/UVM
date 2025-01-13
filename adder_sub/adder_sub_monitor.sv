@@ -24,15 +24,43 @@ class adder_sub_monitor extends uvm_monitor;
     endfunction
 
     task run_phase (uvm_phase phase);
-       // `uvm_info(get_full_name(),"Hi I'm run phase of adder_sub_monitor class, you can write randomize here", UVM_NONE)
-        repeat(2)begin
-            adder_sub_sequence_item_handle  =  adder_sub_sequence_item::type_id::create("adder_sub_sequence_item_handle");
-           // `uvm_info(get_full_name(),"Hi I'm printing before randomizing", UVM_NONE)
-            void'(adder_sub_sequence_item_handle.randomize());
-            //adder_sub_sequence_item_handle.print();
-            monitor_port.write(adder_sub_sequence_item_handle);
-           // `uvm_info(get_full_name(),"Hi I'm printing after randomizing", UVM_NONE)
-        end
+    //    // `uvm_info(get_full_name(),"Hi I'm run phase of adder_sub_monitor class, you can write randomize here", UVM_NONE)
+    //     repeat(2)begin
+    //         adder_sub_sequence_item_handle  =  adder_sub_sequence_item::type_id::create("adder_sub_sequence_item_handle");
+    //        // `uvm_info(get_full_name(),"Hi I'm printing before randomizing", UVM_NONE)
+    //         void'(adder_sub_sequence_item_handle.randomize());
+    //         //adder_sub_sequence_item_handle.print();
+    //         monitor_port.write(adder_sub_sequence_item_handle);
+    //        // `uvm_info(get_full_name(),"Hi I'm printing after randomizing", UVM_NONE)
+    //     end
+    forever begin
+        if(adder_sub_vif.rst)begin
+            monitor_data();
+    end
+    else begin
+        `uvm_info(" ","Reset is driving zero!",UVM_NONE)
+        @(posedge adder_sub_vif.clk);
+    end
+    end
         
     endtask  
+    
+    task  monitor_data();
+        adder_sub_sequence_item_handle  = adder_sub_sequence_item::type_id::create("adder_sub_sequence_item_handle");
+        if(adder_sub_vif.enable) begin
+            @(posedge adder_sub_vif.clk);
+                adder_sub_sequence_item_handle.data_in_1        =   adder_sub_vif.data_in_1;
+                adder_sub_sequence_item_handle.data_in_2        =   adder_sub_vif.data_in_2;
+                adder_sub_sequence_item_handle.enable           =   adder_sub_vif.enable;
+                adder_sub_sequence_item_handle.ctrl             =   adder_sub_vif.ctrl;
+                adder_sub_sequence_item_handle.data_out         =   adder_sub_vif.data_out;
+                monitor_port.write(adder_sub_sequence_item_handle);
+                //`uvm_info(" ","Monitor is displaying...",UVM_NONE)
+               // adder_sub_sequence_item_handle.print();
+        end
+        else begin
+            `uvm_info(" ","Monitor is not displaying...",UVM_NONE)
+            @(posedge adder_sub_vif.clk);
+        end
+    endtask //
 endclass //adder_sub_monitor extends uvm_monitor
