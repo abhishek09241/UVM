@@ -41,7 +41,7 @@ class adder_sub_driver extends uvm_driver#(adder_sub_sequence_item);
 
         seq_item_port.get_next_item(adder_sub_sequence_item_handle);
         @(posedge adder_sub_vif.clk)
-        adder_sub_vif.data_in_1                  <=      adder_sub_sequence_item_handle.data_in_1;
+        adder_sub_vif.data_in_1                  <=      adder_sub_sequence_item_handle.data_in_1;          // Sending data
         adder_sub_vif.data_in_2                  <=      adder_sub_sequence_item_handle.data_in_2;
         adder_sub_vif.ctrl                       <=      adder_sub_sequence_item_handle.ctrl;
         adder_sub_vif.enable                     <=      1'b1;
